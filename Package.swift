@@ -150,7 +150,9 @@ let package = Package(
     .testTarget(
       name: "OTelSwiftTracingTests",
       dependencies: [
-        "OTelSwiftTracing"
+        "OTelSwiftTracing",
+        "InMemoryExporter",
+        .product(name: "OpenTelemetrySdk", package: "opentelemetry-swift-core")
       ],
       path: "Tests/BridgesTests/OTelSwiftTracing"
     ),
